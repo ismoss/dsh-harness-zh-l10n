@@ -30,10 +30,6 @@ DeepSeek Harness (dsh) 界面中文汉化补丁。
 - **`[FAIL]`**：补丁和你本地 dsh 版本对不上。别急，在 issues 里告诉我你的 dsh 版本号（怎么看：打开 dsh 设置 → 关于，或 `C:\dsh\package.json` 里的 `version`），我会更新补丁支持你的版本。
 - **想恢复原始英文**：`cd C:\dsh && npm install @deepseek-ai/dsh-client-ui-agent-preset@0.1.0-rc.6`（以及对应该汉化的 9 个包重装一遍即可）。
 
-## 给开发者的去向
-
-如果你是想**继续开发/修补丁**的开发者，请用开发版仓库（`dsh-harness-zh-l10n-dev`），它含完整工具链和开发日记。
-
 ## 已适配版本
 - dsh（核心包）v0.1.0-rc.6
 - 梁神插件 v0.2.0

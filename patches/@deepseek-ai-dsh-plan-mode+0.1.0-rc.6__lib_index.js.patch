@@ -1,0 +1,11 @@
+--- C:/Users/Administrator/AppData/Local/Temp/_orig/dsh-plan-mode-0.1.0-rc.6/package/lib/index.js	1985-10-26 16:15:00.000000000 +0800
++++ C:/dsh/node_modules/@deepseek-ai/dsh-plan-mode/lib/index.js	2026-08-18 11:22:14.834362700 +0800
+@@ -182,7 +182,7 @@
+ 		ctx.inject(["commands"], (commandCtx) => {
+ 			commandCtx.commands.register({
+ 				name: "plan",
+-				description: "Enter or leave plan mode",
++				description: "进入或退出计划模式",
+ 				input: { hint: "[off|message]" },
+ 				handler: ({ agent, rawInput }) => {
+ 					const message = rawInput.trim();

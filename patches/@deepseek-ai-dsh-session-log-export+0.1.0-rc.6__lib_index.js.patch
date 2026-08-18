@@ -1,0 +1,11 @@
+--- C:/Users/Administrator/AppData/Local/Temp/_orig/dsh-session-log-export-0.1.0-rc.6/package/lib/index.js	1985-10-26 16:15:00.000000000 +0800
++++ C:/dsh/node_modules/@deepseek-ai/dsh-session-log-export/lib/index.js	2026-08-18 11:22:14.872295900 +0800
+@@ -13,7 +13,7 @@
+ function apply(ctx) {
+ 	ctx.effect(() => ctx.commands.register({
+ 		name: "export",
+-		description: "Download this Session log as a ZIP archive",
++		description: "将本会话日志下载为 ZIP 压缩包",
+ 		handler: (invocation) => Promise.resolve(invocation.rawInput.trim() === "" ? REQUESTED : {
+ 			kind: "error",
+ 			text: "The Web /export command does not accept a path."

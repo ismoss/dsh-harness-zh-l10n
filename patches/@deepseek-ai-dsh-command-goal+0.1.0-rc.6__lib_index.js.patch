@@ -1,0 +1,11 @@
+--- C:/Users/Administrator/AppData/Local/Temp/_orig/dsh-command-goal-0.1.0-rc.6/package/lib/index.js	1985-10-26 16:15:00.000000000 +0800
++++ C:/dsh/node_modules/@deepseek-ai/dsh-command-goal/lib/index.js	2026-08-18 11:22:14.842363200 +0800
+@@ -142,7 +142,7 @@
+ function apply(ctx) {
+ 	ctx.commands.register({
+ 		name: "goal",
+-		description: "set or view the goal for a long-running task",
++		description: "设置或查看长线任务的目标",
+ 		input: { hint: "[<objective>|clear|edit <objective>|pause|resume]" },
+ 		handler: (invocation) => executeGoalCommand(ctx, invocation)
+ 	});

@@ -1,0 +1,11 @@
+--- C:/Users/Administrator/AppData/Local/Temp/_orig/dsh-command-compact-0.1.0-rc.6/package/lib/index.js	1985-10-26 16:15:00.000000000 +0800
++++ C:/dsh/node_modules/@deepseek-ai/dsh-command-compact/lib/index.js	2026-08-18 11:22:14.816364200 +0800
+@@ -91,7 +91,7 @@
+ 		};
+ 		yield ctx.commands.register({
+ 			name: "compact",
+-			description: "Compact older conversation history",
++			description: "压缩较早的对话历史",
+ 			handler
+ 		});
+ 	}, "command-compact lifecycle");

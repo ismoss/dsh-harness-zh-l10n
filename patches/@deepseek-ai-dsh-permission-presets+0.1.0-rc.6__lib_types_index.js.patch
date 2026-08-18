@@ -1,0 +1,11 @@
+--- C:/Users/Administrator/AppData/Local/Temp/_orig/dsh-permission-presets-0.1.0-rc.6/package/lib/types/index.js	1985-10-26 16:15:00.000000000 +0800
++++ C:/dsh/node_modules/@deepseek-ai/dsh-permission-presets/lib/types/index.js	2026-08-18 11:31:09.463826400 +0800
+@@ -164,7 +164,7 @@
+         ctx.inject(['commands'], (commandCtx) => {
+             commandCtx.commands.register({
+                 name: 'permission',
+-                description: 'Switch the permission preset (sandbox mode + approval policy)',
++                description: '切换权限预设（沙箱模式 + 审批策略）',
+                 input: { hint: '<preset>' },
+                 // No settlement text labels its value with this command's own name: a
+                 // surface that renders `name · text` (the web command row) would

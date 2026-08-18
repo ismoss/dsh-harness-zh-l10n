@@ -1,0 +1,11 @@
+--- C:/Users/Administrator/AppData/Local/Temp/_orig/dsh-command-feedback-0.1.0-rc.6/package/lib/index.js	1985-10-26 16:15:00.000000000 +0800
++++ C:/dsh/node_modules/@deepseek-ai/dsh-command-feedback/lib/index.js	2026-08-18 11:22:14.824362000 +0800
+@@ -73,7 +73,7 @@
+ function apply(ctx) {
+ 	ctx.commands.register({
+ 		name: "feedback",
+-		description: "record feedback about this session",
++		description: "记录对本会话的反馈",
+ 		input: { hint: "<text>" },
+ 		recordInput: false,
+ 		handler: (invocation) => executeFeedbackCommand(invocation, ctx)

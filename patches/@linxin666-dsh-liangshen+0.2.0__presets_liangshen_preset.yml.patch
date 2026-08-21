@@ -1,7 +1,0 @@
---- C:/Users/Administrator/AppData/Local/Temp/_orig/liangshen/package/presets/liangshen/preset.yml	1985-10-26 16:15:00.000000000 +0800
-+++ C:/Users/Administrator/.dsh/profiles/web/node_modules/@linxin666/dsh-liangshen/presets/liangshen/preset.yml	2026-08-18 13:44:42.428818800 +0800
-@@ -1,3 +1,3 @@
- name: 梁神模式
--description: 那模式一启动，使用者当场双腿一软瘫坐在地，仿佛看见原子弹爆炸——三秒，三辈子的代码，外加文言文、二进制、摩斯电码三语解说轮番轰炸，凡人最后只能趴在地上用下巴磕出两个字:梁神！
-+description: 首轮以极简双工具锚定任务轨迹，随后自动切入 PTC（Code Mode）并恢复完整工具环境；适合复杂需求、模块设计与难题排查。新建会话选它，第一句直接给任务。
- order: 4

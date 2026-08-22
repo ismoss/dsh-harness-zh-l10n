@@ -78,33 +78,11 @@ const OPS = [
     search:`presetCordisDescription: "用于创建自定义 Agent preset：具备标准模式的全部能力，并提供运行时检查、插件实验和 preset 创作指导。"`,
     replace:`presetCordisDescription: "用于新建或调试自定义 Agent 预设（检视运行时、实验插件、编写预设）；非日常开发，也不是创意写作。"` },
 
-  // ===== dsh-client-ui-conversation：权限中文 + 确认弹窗 =====
-  { group:'dsh', pkg:'dsh-client-ui-conversation', file:'lib/client.js', type:'insertAfter',
-    anchor:'function displayName(name) {',
-    block:`\t\t\tconst zh = { 'read-only': '只读', 'workspace-write': '工作区写入', 'danger-full-access': '完全访问' };\n\t\t\tif (name in zh) return zh[name];` },
-  { group:'dsh', pkg:'dsh-client-ui-conversation', file:'lib/client.js', type:'replace',
-    search:`? "Full access" : displayName(option.name)`, replace:`? "完全访问" : displayName(option.name)` },
-  { group:'dsh', pkg:'dsh-client-ui-conversation', file:'lib/client.js', type:'replace',
-    search:`"确认启用 Full access？"`, replace:`"确认启用完全访问？"` },
-  { group:'dsh', pkg:'dsh-client-ui-conversation', file:'lib/client.js', type:'replace',
-    search:`"启用 Full access"`, replace:`"启用完全访问"` },
-
-  // ===== dsh-client-ui-permission-presets：设置页权限中文 =====
-  { group:'dsh', pkg:'dsh-client-ui-permission-presets', file:'lib/client.js', type:'insertAfter',
-    anchor:'function displayPresetName(name) {',
-    block:`\t\t\tconst zh = { 'read-only': '只读', 'workspace-write': '工作区写入', 'danger-full-access': '完全访问' };\n\t\t\tconst key = String(name).toLowerCase().replace(/\\s+/g, "-");\n\t\t\tif (key in zh) return zh[key];` },
-  { group:'dsh', pkg:'dsh-client-ui-permission-presets', file:'lib/client.js', type:'replace',
-    search:`? "Full access" : displayPresetName(name)`, replace:`? "完全访问" : displayPresetName(name)` },
-  { group:'dsh', pkg:'dsh-client-ui-permission-presets', file:'lib/client.js', type:'replace',
-    search:`"确认启用 Full access？"`, replace:`"确认启用完全访问？"` },
-  { group:'dsh', pkg:'dsh-client-ui-permission-presets', file:'lib/client.js', type:'replace',
-    search:`"confirm.description": "启用 Full access 后，新会话将减少确认步骤，并且可以直接执行更多操作，包括敏感操作、文件修改或外部命令。仅建议在你信任后续任务时使用。"`,
-    replace:`"confirm.description": "启用完全访问后，新会话将减少确认步骤，并且可以直接执行更多操作，包括敏感操作、文件修改或外部命令。仅建议在你信任后续任务时使用。"` },
-  { group:'dsh', pkg:'dsh-client-ui-permission-presets', file:'lib/client.js', type:'replace',
-    search:`"confirm.description": "启用 Full access 后，agent 将减少确认步骤，并且可以直接执行更多操作，包括敏感操作、文件修改或外部命令。仅建议在你信任当前任务时使用。"`,
-    replace:`"confirm.description": "启用完全访问后，agent 将减少确认步骤，并且可以直接执行更多操作，包括敏感操作、文件修改或外部命令。仅建议在你信任当前任务时使用。"` },
-  { group:'dsh', pkg:'dsh-client-ui-permission-presets', file:'lib/client.js', type:'replace',
-    search:`"启用 Full access"`, replace:`"启用完全访问"` },
+  // ===== 权限标签（Read Only / Workspace Write / Full access）=====
+  // 自 dsh 0.1.1-rc.1 起，权限标签改用内置 i18n 词典（lexicon），包内已自带中文词条
+  // （access.preset.readOnly/workspaceWrite/fullAccess 等），界面语言设为中文即显示中文，
+  // 无需再用子串替换打补丁。故此处不再处理；若你的界面仍是英文权限标签，
+  // 请在 dsh 设置里把「语言/Language」切换为中文（或跟随系统中文）。
 
   // ===== 命令描述汉化 =====
   { group:'dsh', pkg:'dsh-command-compact', file:'lib/index.js', type:'replace',
